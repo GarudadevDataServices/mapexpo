@@ -14,7 +14,8 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  output: "export"
+  output: "export",
+  assetPrefix: './'
 }
 
 // module.exports = {
