@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 
 import { findPostBySlug, findLatestPosts } from '~/utils/posts';
 
-// export const dynamicParams = false;
+export const dynamicParams = false;
 
 const getFormattedDate = (date) => date;
 
