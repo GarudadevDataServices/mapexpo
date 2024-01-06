@@ -12,6 +12,7 @@ const SITE = require('./src/config.js').SITE;
 // module.exports =  nextConfig;
 module.exports = {
   reactStrictMode: true,
+  output: "export",
 
   trailingSlash: SITE.trailingSlash,
   basePath: SITE.basePathname !== '/' ? SITE.basePathname : '',
