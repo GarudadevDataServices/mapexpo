@@ -15,7 +15,7 @@ module.exports = {
     unoptimized: true,
   },
   output: "export",
-  assetPrefix: './'
+  // assetPrefix: './'
 }
 
 // module.exports = {
