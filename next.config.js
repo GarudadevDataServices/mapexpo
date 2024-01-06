@@ -11,24 +11,31 @@ const SITE = require('./src/config.js').SITE;
 
 // module.exports =  nextConfig;
 module.exports = {
-  reactStrictMode: true,
-  // output: "export",
-
-  trailingSlash: SITE.trailingSlash,
-  basePath: SITE.basePathname !== '/' ? SITE.basePathname : '',
-
-  swcMinify: true,
-  poweredByHeader: false,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'source.unsplash.com',
-      },
-    ],
-  }
-};
+    unoptimized: true,
+  },
+  output: "export"
+}
+
+// module.exports = {
+//   reactStrictMode: true,
+//   output: "export",
+
+//   trailingSlash: SITE.trailingSlash,
+//   basePath: SITE.basePathname !== '/' ? SITE.basePathname : '',
+
+//   swcMinify: true,
+//   poweredByHeader: false,
+//   images: {
+//     remotePatterns: [
+//       {
+//         protocol: 'https',
+//         hostname: 'images.unsplash.com',
+//       },
+//       {
+//         protocol: 'https',
+//         hostname: 'source.unsplash.com',
+//       },
+//     ],
+//   }
+// };
