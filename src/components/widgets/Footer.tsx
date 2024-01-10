@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { footerData } from '~/shared/data/global.data';
 
 const Footer = () => {
@@ -19,13 +20,13 @@ const Footer = () => {
                 {links &&
                   links.map(({ label, href }, index) => (
                     <li key={`item-link-${index}`}>
-                      <a
+                      <Link
                         className="duration-150 ease-in-out placeholder:transition hover:text-gray-700 hover:underline dark:text-gray-400"
                         aria-label={label}
-                        href={href}
-                      >
-                        {label}
-                      </a>
+                        href={href as string}
+                    >
+                      {label}
+                    </Link>
                       {links.length - 1 !== index && <span className="mr-1"> · </span>}
                     </li>
                   ))}
