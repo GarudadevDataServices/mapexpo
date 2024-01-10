@@ -1,9 +1,6 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import type { Metadata } from 'next';
 
-import Image from 'next/image';
-import Link from 'next/link';
-
 import { findLatestPosts } from '~/utils/posts';
 
 export const metadata: Metadata = {
