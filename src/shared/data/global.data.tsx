@@ -32,13 +32,6 @@ export const headerData: HeaderProps = {
       href: 'https://akuladatta.github.io',
     },
   ],
-  actions: [
-    {
-      text: 'Download',
-      href: 'https://github.com/onwidget/tailnext',
-      targetBlank: true,
-    },
-  ],
   isSticky: true,
   showToggleTheme: true,
   showRssFeed: false,
@@ -47,7 +40,7 @@ export const headerData: HeaderProps = {
 
 // Footer data
 export const footerData: FooterProps = {
-  title: 'TailNext',
+  title: 'MapExpo',
   links: [
     {
       label: 'Terms & Conditions',
