@@ -29,7 +29,7 @@ To start your journey into diverse scenarios and explore the interactive maps on
 
 ## Contributing
 
-If you have ideas for additional scenarios, improvements, or new features, we encourage contributions! Follow the steps outlined in the [Contributing Guidelines](CONTRIBUTING.md).
+If you have ideas for additional scenarios, improvements, or new features, we encourage contributions! you can convey us by [mail](mailto:akula.gurudatta@gmail.com).
 
 ## Issues
 
