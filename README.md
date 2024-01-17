@@ -1,167 +1,46 @@
-# Tailnext
+# MapExpo
 
-**Tailnext** is a free and open-source template to make your website using **[NextJS](https://nextjs.org/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account best practices.
+Welcome to MapExpo - My Personal Collection of Interactive Maps Showcasing Diverse Scenarios!
+
+## Overview
+
+MapExpo is a unique web application that presents a curated collection of interactive maps, each depicting different scenarios ranging from political landscapes and language distributions to religious affiliations and caste demographics. Created with a focus on various national surveys of India, MapExpo offers an immersive experience for exploring and understanding the rich diversity of our world.
 
 ## Features
 
-- ✅ Integration with **Tailwind CSS** supporting **Dark mode**.
-- ✅ **Production-ready** scores in [Lighthouse](https://web.dev/measure/) and [PageSpeed Insights](https://pagespeed.web.dev/) reports.
-- ✅ **Image optimization** and **Font optimization**.
-- ✅ Fast and **SEO friendly blog**.
-- ✅ Generation of **project sitemap** and **robots.txt** based on your routes.
+- **Scenario-Based Maps:** Explore maps crafted around different scenarios, including political, linguistic, religious, and caste-based perspectives.
+- **Interactive Interface:** Dive deep into each scenario with a user-friendly interface that allows zooming, panning, and toggling between map layers.
+- **Rich Information:** Gain insights into the intricate details of each scenario, with informative tooltips and markers highlighting key features.
 
-<br>
+## Getting Started
 
-<img src="./screenshot.jpg" alt="Tailnext Theme Screenshot">
+To start your journey into diverse scenarios and explore the interactive maps on MapExpo, visit [MapExpo](https://garudadevdataservices.github.io/mapexpo) in your web browser. No installation is needed, and you can begin discovering the intricate tapestry of our world immediately.
 
-[![onWidget](https://custom-icon-badges.demolab.com/badge/made%20by%20-onWidget-556bf2?style=flat-square&logo=onwidget&logoColor=white&labelColor=101827)](https://onwidget.com)
-[![License](https://img.shields.io/github/license/onwidget/tailnext?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/onwidget/tailnext/blob/main/LICENSE.md)
-[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/onwidget)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/onwidget/tailnext#contributing)
-[![Known Vulnerabilities](https://snyk.io/test/github/onwidget/tailnext/badge.svg?style=flat-square)](https://snyk.io/test/github/onwidget/tailnext)
+## Usage
 
-<br>
+1. **Select Scenario:**
+   - Choose from a variety of scenarios presented on the homepage.
 
-<details open>
-<summary>Table of Contents</summary>
+2. **Explore Maps:**
+   - Navigate through interactive maps using zoom and pan features.
 
-- [Demo](#demo)
-- [Getting started](#getting-started)
-  - [Project structure](#project-structure)
-  - [Commands](#commands)
-  - [Configuration](#configuration)
-  - [Deploy](#deploy)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
-
-</details>
-
-<br>
-
-## Demo
-
-📌 [https://tailnext.vercel.app/](https://tailnext.vercel.app/)
-
-<br>
-
-## Getting started
-
-- Clone: `git clone https://github.com/onwidget/tailnext.git`
-- Enter in the directory: `cd tailnext`
-- Install dependencies: `npm install`
-- Start the development server: `npm run dev`
-- View project in local environment: `localhost:3000`
-
-### Project structure
-
-Inside **Tailnext** template, you'll see the following folders and files:
-
-```
-/
-├── app/
-│   ├── (blog)
-│   │   ├── [slug]
-|   |   |   └── page.js
-|   |   └── blog
-|   |       └── page.js
-│   ├── head.js
-│   ├── layout.js
-│   └── page.js
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── assets/
-│   │   ├── images/
-|   |   └── styles/
-|   |       └── base.css
-│   ├── components/
-│   │   ├── atoms/
-|   |   └── widgets/
-|   |       ├── Header.astro
-|   |       ├── Footer.astro
-|   |       └── ...
-│   │── content/
-│   |   └── blog/
-│   |       ├── demo-post-1.md
-│   |       └── ...
-│   ├── utils/
-│   └── config.mjs
-├── package.json
-└── ...
-```
-
-[![Edit Tailnext on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/onwidget/tailnext/tree/main)
-
-> **Seasoned next.js expert?** Delete this file. Update `config.mjs` and contents. Have fun!
-
-<br>
-
-### Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command               | Action                                       |
-| :-------------------- | :------------------------------------------- |
-| `npm install`         | Install dependencies                         |
-| `npm run dev`         | Starts local dev server at `localhost:3000`  |
-| `npm run build`       | Build your production site to `./dist/`      |
-| `npm run preview`     | Preview your build locally, before deploying |
-| `npm run format`      | Format codes with Prettier                   |
-| `npm run lint:eslint` | Run Eslint                                   |
-
-<br>
-
-### Configuration
-
-Coming soon ..
-
-<br>
-
-### Deploy
-
-#### Deploy to production (manual)
-
-You can create an optimized production build with:
-
-```shell
-npm run build
-```
-
-Now, your website is ready to be deployed. All generated files are located at
-`dist` folder, which you can deploy the folder to any hosting service you
-prefer.
-
-#### Deploy to Netlify
-
-Clone this repository on own GitHub account and deploy to Netlify:
-
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/onwidget/tailnext.git)
-
-#### Deploy to Vercel
-
-Clone this repository on own GitHub account and deploy to Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonwidget%2Ftailnext)
-
-<br>
-
-## Roadmap
-
-Coming soon ..
-
-<br>
+3. **Scenario Details:**
+   - Click on map markers or regions to access detailed information related to the chosen scenario.
 
 ## Contributing
 
-If you have any idea, suggestions or find any bugs, feel free to open a discussion, an issue or create a pull request.
-That would be very useful for all of us and we would be happy to listen and take action.
+If you have ideas for additional scenarios, improvements, or new features, we encourage contributions! Follow the steps outlined in the [Contributing Guidelines](CONTRIBUTING.md).
 
-## Acknowledgements
+## Issues
 
-Initially created by [onWidget](https://onwidget.com) and maintained by a community of [contributors](https://github.com/onwidget/tailnext/graphs/contributors).
+Encountered a bug or have suggestions for enhancements? Please [open an issue](https://github.com/garudadevdataservices/mapexpo/issues) and share your thoughts. Your feedback is invaluable!
 
 ## License
 
-**Tailnext** is licensed under the MIT license — see the [LICENSE](https://github.com/onwidget/tailnext/blob/main/LICENSE.md) file for details.
+MapExpo is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+For inquiries or support, please reach out to the MapExpo development team at [akula.gurudatta@gmail.com](mailto:akula.gurudatta@gmail.com).
+
+Thank you for being a part of MapExpo - where maps tell stories of diversity! 🗺️🌐
