@@ -37,7 +37,7 @@ Encountered a bug or have suggestions for enhancements? Please [open an issue](h
 
 ## License
 
-MapExpo is licensed under the [MIT License](LICENSE).
+MapExpo is licensed under the [MIT License](LICENSE.md).
 
 ## Contact
 
