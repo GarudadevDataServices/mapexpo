@@ -1,14 +1,13 @@
 import { IconBrandGithub } from '@tabler/icons-react';
 import type { Metadata } from 'next';
 
-import { findLatestPosts } from '~/utils/posts';
 
 export const metadata: Metadata = {
   title: 'data source',
 };
 
 export default async function Home({}) {
-  const posts = await findLatestPosts();
+  
   return (
     <section className="mx-4 md:mx-8 py-4">
       <header>
