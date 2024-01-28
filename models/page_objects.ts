@@ -1,14 +1,16 @@
-type pageType = 'map'|'page';
+export type PageType = 'map'|'page';
+// export type TagType = 'politics'|'languages'|'religion';
 
-interface PageObject {
+export interface PageObject {
     id: string;
     img: string;
     matter: string;
     title: string;
-    type: pageType;
+    type: PageType;
+    tag?: string;
 }
 
-interface PageData {
+export interface PageData {
     Objects: PageObject[];
     icon: string;
     title: string;

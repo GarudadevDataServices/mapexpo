@@ -1,3 +1,4 @@
+import { PageData } from "models/page_objects";
 
 export const convertApiToPageData = async (path:String): Promise<PageData> => {
     const apiUrl = `https://newscode-fc5e6-default-rtdb.firebaseio.com/mapanalysis/pages/${path}/.json`;
