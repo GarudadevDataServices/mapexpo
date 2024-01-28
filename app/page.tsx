@@ -111,22 +111,22 @@ function NormalCard(props: { page: PageObject }) {
 function tag(_tag:string) {
   switch(_tag){
     case "politics":
-      return <div className=' rounded-tl-3xl border border-black bg-white pl-2 flex absolute items-end gap-2 bottom-0 right-0 text-base font-serif font-bold'>
+      return <div className=' rounded-l-2xl border border-black bg-white pl-2 flex absolute items-end gap-2 bottom-0 right-0 text-base font-serif font-bold'>
         <div className='pb-1'>ELECTIONS</div>
         <Image src={Elections} alt={''} className='w-10 h-10' />
       </div>
     case "religion":
-      return <div className=' rounded-tl-3xl border border-black bg-white pl-2 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
+      return <div className=' rounded-l-2xl border border-black bg-white pl-2 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
         <div className='pb-1'>RELIGION</div>
         <Image src={Religion} alt={''} className='w-10 h-10' />
       </div>
     case "language":
-      return <div className=' rounded-tl-3xl border border-black bg-white pl-2 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
+      return <div className=' rounded-l-2xl border border-black bg-white pl-2 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
         <div className='pb-1'>LANGUAGE</div>
         <Image src={Language} alt={''} className='w-10 h-10' />
       </div>
     default:
-      return <div className=' rounded-tl-3xl border border-black bg-white pl-2 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
+      return <div className=' rounded-l-2xl border border-black bg-white pl-2 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
         <div className='pb-1'>{_tag}</div>
       </div>
   }
