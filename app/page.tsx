@@ -77,12 +77,11 @@ function DoubleCard(props: { page: PageObject }) {
   return <div className='w-full md:w-1/2 lg:w-2/3 pr-4 pb-4'>
     <Link href={href}
       key={page.id} title={page.title} className='w-full bg-white cursor-pointer flex flex-col lg:flex-row justify-center items-center border shadow-lg rounded-md lg:rounded-xl  mx-auto transition-all duration-100 ease-in h-56 font-medium overflow-hidden'>
-      <picture className='lg:relative lg:w-2/3 w-full flex justify-center'>
-        <div className='relative lg:static'>
-          <img src={page.img} alt={page.title} className=' h-48 object-cover'/>
-          {/* <div className=' absolute top-[50%] right-[25%] text-base font-serif font-semibold text-red-600'>ELECTIONS</div> */}
-          {page.tag && tag(page.tag)}
-        </div>
+      <picture className='relative lg:w-2/3 w-full flex justify-center'>
+      {(page.type=='page') && <div className=' rounded-3xl text-white px-2 flex absolute top-0 right-2 text-[14px] font-mono bg-black/[0.5]'>Map Collection</div>}
+        <img src={page.img} alt={page.title} className=' h-48 object-cover'/>
+        {/* <div className=' absolute top-[50%] right-[25%] text-base font-serif font-semibold text-red-600'>ELECTIONS</div> */}
+        {page.tag && tag(page.tag)}
       </picture>
       <div className='h-full bg-teal-50 rounded-xl flex flex-1 justify-center items-center whitespace-nowrap lg:whitespace-normal w-full lg:w-1/3 px-2 '>
         <div className='w-full text-center text-ellipsis overflow-hidden text-md'>{page.title}</div>
@@ -97,7 +96,8 @@ function NormalCard(props: { page: PageObject }) {
   return <div className='w-full md:w-1/2 lg:w-1/3 pr-4 pb-4'>
     <Link href={href}
       key={page.id} title={page.title} className='bg-white cursor-pointer  flex flex-col justify-center items-center border shadow-lg rounded-md  mx-auto transition-all duration-100 ease-in h-56 overflow-hidden font-medium'>
-      <picture className='relative text-center'>
+      <picture className='relative w-full text-center flex justify-center'>
+        {(page.type=='page') && <div className=' rounded-3xl text-white px-2 flex absolute top-0 right-2 text-[14px] font-mono bg-black/[0.5] my-1'>Map Collection</div>}
         <img src={page.img} alt={page.title} className=' h-48 object-cover' />
         {/* <div className=' absolute top-[50%] right-[25%] text-base font-serif font-semibold text-red-600'>ELECTIONS</div> */}
         {page.tag && tag(page.tag)}
@@ -111,22 +111,24 @@ function NormalCard(props: { page: PageObject }) {
 function tag(_tag:string) {
   switch(_tag){
     case "politics":
-      return <div className=' rounded-tl-3xl border border-black bg-red-500/[.5] pl-1 flex absolute items-end gap-2 bottom-0 right-0 text-base font-serif font-bold'>
+      return <div className=' rounded-tl-3xl border border-black bg-white pl-2 flex absolute items-end gap-2 bottom-0 right-0 text-base font-serif font-bold'>
         <div className='pb-1'>ELECTIONS</div>
         <Image src={Elections} alt={''} className='w-10 h-10' />
       </div>
     case "religion":
-      return <div className=' rounded-tl-3xl border border-black bg-green-500/[.5] pl-1 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
+      return <div className=' rounded-tl-3xl border border-black bg-white pl-2 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
         <div className='pb-1'>RELIGION</div>
         <Image src={Religion} alt={''} className='w-10 h-10' />
       </div>
     case "language":
-      return <div className=' rounded-tl-3xl border border-black bg-blue-500/[.5] pl-1 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
+      return <div className=' rounded-tl-3xl border border-black bg-white pl-2 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
         <div className='pb-1'>LANGUAGE</div>
         <Image src={Language} alt={''} className='w-10 h-10' />
       </div>
     default:
-      return ""
+      return <div className=' rounded-tl-3xl border border-black bg-white pl-2 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
+        <div className='pb-1'>{_tag}</div>
+      </div>
   }
   
 }
