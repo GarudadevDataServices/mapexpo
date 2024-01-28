@@ -78,7 +78,7 @@ function DoubleCard(props: { page: PageObject }) {
     <Link href={href}
       key={page.id} title={page.title} className='w-full bg-white cursor-pointer flex flex-col lg:flex-row justify-center items-center border shadow-lg rounded-md lg:rounded-xl  mx-auto transition-all duration-100 ease-in h-56 font-medium overflow-hidden'>
       <picture className='relative lg:w-2/3 w-full flex justify-center'>
-      {(page.type=='page') && <div className=' rounded-3xl text-white px-2 flex absolute top-0 right-2 text-[14px] font-mono bg-black/[0.5]'>Map Collection</div>}
+      {(page.type=='page') && <div className='mt-1 lg:mt-0 rounded-3xl text-white px-2 flex absolute top-0 right-2 text-[14px] font-mono bg-black/[0.5]'>Map Collection</div>}
         <img src={page.img} alt={page.title} className=' h-48 object-cover'/>
         {/* <div className=' absolute top-[50%] right-[25%] text-base font-serif font-semibold text-red-600'>ELECTIONS</div> */}
         {page.tag && tag(page.tag)}
@@ -126,7 +126,7 @@ function tag(_tag:string) {
         <Image src={Language} alt={''} className='w-10 h-10' />
       </div>
     default:
-      return <div className=' rounded-l-2xl border border-black bg-white pl-2 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
+      return <div className='pr-3 pt-1 px-2 rounded-l-2xl border border-black bg-white pl-2 flex absolute items-end gap-1 bottom-0 right-0 text-base font-serif font-bold'>
         <div className='pb-1'>{_tag}</div>
       </div>
   }
