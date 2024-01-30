@@ -71,15 +71,39 @@ export default function Page() {
   );
 }
 
+const getAltImgLink = (imageLink: string): string|null => {
+
+  const githubRawRegex = /^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(.+)$/;
+  const githubRawMatch = imageLink.match(githubRawRegex);
+
+  if (githubRawMatch) {
+    const [, owner, repo, filePath] = githubRawMatch;
+    return `https://${owner}.github.io/${repo}/${filePath}`;
+  } else {
+    const githubPageRegex = /^https:\/\/([^/]+)\.github\.io\/([^/]+)\/(.+)$/;
+    const githubPageMatch = imageLink.match(githubPageRegex);
+
+    if (githubPageMatch) {
+      const [, owner, repo, filePath] = githubPageMatch;
+      return `https://raw.githubusercontent.com/${owner}/${repo}/master/${filePath}`;
+    }
+  }
+
+  // If the input doesn't match either pattern, return the input itself
+  return null;
+};
+
+
 function DoubleCard(props: { page: PageObject }) {
   const page = props.page;
+  const altImg =getAltImgLink(page.img);
   const href = (page.type === 'page') ? { pathname: '/', query: { page: page.id } } : { pathname: 'https://garudadevdataservices.github.io/map', query: { map: page.id } }
   return <div className='w-full md:w-1/2 lg:w-2/3 pr-4 pb-4'>
     <Link href={href}
       key={page.id} title={page.title} className='w-full bg-white cursor-pointer flex flex-col lg:flex-row justify-center items-center border shadow-lg rounded-md lg:rounded-xl  mx-auto transition-all duration-100 ease-in h-56 font-medium overflow-hidden'>
       <picture className='relative lg:w-2/3 w-full flex justify-center'>
       {(page.type=='page') && <div className='mt-1 lg:mt-0 rounded-3xl text-white px-2 flex absolute top-0 right-2 text-[14px] font-mono bg-black/[0.5]'>Map Collection</div>}
-        <img src={page.img} alt={page.title} className=' h-48 object-cover'/>
+        <img src={page.img} alt={altImg?altImg:page.title} className=' h-48 object-cover'/>
         {/* <div className=' absolute top-[50%] right-[25%] text-base font-serif font-semibold text-red-600'>ELECTIONS</div> */}
         {page.tag && tag(page.tag)}
       </picture>
@@ -92,13 +116,14 @@ function DoubleCard(props: { page: PageObject }) {
 
 function NormalCard(props: { page: PageObject }) {
   const page = props.page;
+  const altImg =getAltImgLink(page.img);
   const href = (page.type === 'page') ? { pathname: '/', query: { page: page.id } } : { pathname: 'https://garudadevdataservices.github.io/map', query: { map: page.id } }
   return <div className='w-full md:w-1/2 lg:w-1/3 pr-4 pb-4'>
     <Link href={href}
       key={page.id} title={page.title} className='bg-white cursor-pointer  flex flex-col justify-center items-center border shadow-lg rounded-md  mx-auto transition-all duration-100 ease-in h-56 overflow-hidden font-medium'>
       <picture className='relative w-full text-center flex justify-center'>
         {(page.type=='page') && <div className=' rounded-3xl text-white px-2 flex absolute top-0 right-2 text-[14px] font-mono bg-black/[0.5] my-1'>Map Collection</div>}
-        <img src={page.img} alt={page.title} className=' h-48 object-cover' />
+        <img src={page.img} alt={altImg?altImg:page.title} className=' h-48 object-cover' />
         {/* <div className=' absolute top-[50%] right-[25%] text-base font-serif font-semibold text-red-600'>ELECTIONS</div> */}
         {page.tag && tag(page.tag)}
       </picture>
