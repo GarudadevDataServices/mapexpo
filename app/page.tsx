@@ -23,16 +23,21 @@ import { PageData, PageObject } from 'models/page_objects';
 
 export default function Page() {
   const [pageData, setPageData] = useState<PageData | null>(null);
+  const [paramLoaded,setLoadedParams] = useState<String[]>([]);
   const searchParams = useSearchParams();
 
   useEffect(() => {
     setPageData(null);
     const path = searchParams.get('page') ?? 'home';
     console.log(`Getting data for ${path}`)
-    convertApiToPageData(path).then(
+    const paramAlreadyLoaded = paramLoaded.some((param)=> param===path);
+    if (!paramAlreadyLoaded){
+      setLoadedParams([...paramLoaded,path]);
+    }
+    convertApiToPageData(path,paramAlreadyLoaded).then(
       (data) => setPageData(data)
     )
-  }, [searchParams]);
+  }, [searchParams,paramLoaded]);
 
   return (
     <div className='h-full'>
