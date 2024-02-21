@@ -31,11 +31,11 @@ export default function RootLayout({ children }: LayoutProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="bg-slate-100  tracking-tight text-gray-900 antialiased dark:bg-slate-900 dark:text-slate-300">
-        <Providers>
+        
           <Header />
           <main className=''>{children}</main>
           <Footer2 />
-        </Providers>
+        
       </body>
     </html>
   );
