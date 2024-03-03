@@ -1,7 +1,7 @@
 "use client";
 
 // import type { Metadata } from 'next';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { convertApiToPageData } from 'apis/api';
 import ClipLoader from 'react-spinners/ClipLoader';
 import { useSearchParams } from 'next/navigation';
@@ -23,21 +23,30 @@ import { PageData, PageObject } from 'models/page_objects';
 
 export default function Page() {
   const [pageData, setPageData] = useState<PageData | null>(null);
-  const [paramLoaded,setLoadedParams] = useState<String[]>([]);
+  // const [paramLoaded,setLoadedParams] = useState<String[]>([]);
+
+  const paramLoaded = useRef<String[]>([]);
   const searchParams = useSearchParams();
 
-  useEffect(() => {
-    setPageData(null);
-    const path = searchParams.get('page') ?? 'home';
-    console.log(`Getting data for ${path}`)
-    const paramAlreadyLoaded = paramLoaded.some((param)=> param===path);
-    if (!paramAlreadyLoaded){
-      setLoadedParams([...paramLoaded,path]);
-    }
-    convertApiToPageData(path,paramAlreadyLoaded).then(
+  
+  const loadInitialData = useCallback((_path:String,paramAlreadyLoaded:boolean)=>{   
+    // if (pageData!=null){
+      setPageData(null);
+    // }
+    convertApiToPageData(_path,paramAlreadyLoaded).then(
       (data) => setPageData(data)
     )
-  }, [searchParams,paramLoaded]);
+  },[]);
+
+  useEffect(() => {
+    const path = searchParams.get('page') ?? 'home';
+    console.log(`Getting data for ${path}`)
+    const paramAlreadyLoaded = paramLoaded.current.some((param)=> param===path);
+    if (!paramAlreadyLoaded){
+      paramLoaded.current=[...paramLoaded.current,path];
+    }
+    loadInitialData(path,paramAlreadyLoaded);
+  }, [loadInitialData, searchParams]);
 
   return (
     <div className='h-full'>

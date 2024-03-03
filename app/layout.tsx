@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 
 import { SITE } from '~/config.js';
 
-import Providers from '~/components/atoms/Providers';
 import Header from '~/components/widgets/Header';
 import Footer2 from '~/components/widgets/Footer2';
 
