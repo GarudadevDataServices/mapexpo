@@ -24,11 +24,11 @@ export const announcementData: AnnouncementProps = {
 export const headerData: HeaderProps = {
   links: [
     {
-      label: 'Data Source',
+      label: '🔍 Data Source',
       href: '/source',
     },
     {
-      label: 'About Us',
+      label: '👥 About Us',
       href: 'https://akuladatta.github.io',
     },
   ],

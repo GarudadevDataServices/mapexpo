@@ -41,11 +41,11 @@ export default function RootLayout({ children }: LayoutProps) {
           data-x_margin="18"
           data-y_margin="18"
 
-          async
+          defer
           // strategy="afterInteractive"
         />
        </head>
-      <body className="bg-slate-100  tracking-tight text-gray-900 antialiased dark:bg-slate-900 dark:text-slate-300">
+      <body className="bg-gradient-to-r from-blue-50 via-white to-blue-50 dark:from-[#222] dark:via-[#333] dark:to-[#222]">
           <Header />
           <main className=''>{children}</main>
           <Footer2 />

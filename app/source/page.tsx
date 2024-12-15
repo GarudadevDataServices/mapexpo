@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default async function Home({}) {
   
   return (
-    <section className="mx-4 md:mx-8 py-6 bg-gradient-to-r from-blue-100 via-white to-blue-100 rounded-lg shadow-lg">
+    <section className="mx-4 md:mx-8 py-6 rounded-lg">
   <header className="text-center">
     <h1 className="md:mx-4 leading-tight font-heading mb-8 text-3xl font-extrabold tracking-tight text-blue-900">
       🔍 Data Source

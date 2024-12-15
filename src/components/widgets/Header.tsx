@@ -47,7 +47,7 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-white border-b-2 shadow-lg rounded-md top-0 z-40 mx-auto w-full flex-none  transition-all duration-100 ease-in dark:bg-slate-900 md:backdrop-blur-sm dark:md:bg-slate-900/90 ${
+      className={`bg-white border-b-2 shadow-lg rounded-md top-0 z-40 mx-auto w-full flex-none transition-all duration-100 ease-in dark:from-[#222] dark:via-[#333] dark:to-[#222] md:backdrop-blur-sm dark:md:bg-slate-900/90 ${
         isSticky ? 'sticky' : 'relative'
       }`}
       id="header"
